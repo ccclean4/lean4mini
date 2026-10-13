@@ -1,0 +1,32 @@
+// io + 短路求值 && || !
+// echo: 把 stdin 拷貝到 stdout
+let c = getc();
+while (c >= 0) {
+  putc(c);
+  c = getc();
+}
+fn t() {
+  print 999;
+  return 1;
+}
+fn f() {
+  print 888;
+  return 0;
+}
+// && 短路：左為 0 不應呼叫 t()
+if (f() && t()) {
+  print 1;
+} else {
+  print 0;
+}
+// || 短路：左為 1 不應呼叫 t()
+if (f() || t()) {
+  print 2;
+} else {
+  print 3;
+}
+print !0;
+print !5;
+print -3 + 7 * 2;
+print 10 / 3;
+print 10 % 3;

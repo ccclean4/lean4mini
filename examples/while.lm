@@ -1,0 +1,13 @@
+// while + 全域變數 + 賦值
+let i = 0;
+let s = 0;
+while (i < 10) {
+  s = s + i;
+  i = i + 1;
+}
+print s;
+if (s == 45) {
+  print 1;
+} else {
+  print 0;
+}

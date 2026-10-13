@@ -1,0 +1,14 @@
+// string: 字串常數回傳位址，以 0 結尾
+let s = "hi!";
+print s[0];
+print s[1];
+print s[2];
+// 逐字元 putc 輸出
+let p = "ABC";
+let i = 0;
+while (p[i] != 0) {
+  putc(p[i]);
+  i = i + 1;
+}
+putc('\n');
+print i;

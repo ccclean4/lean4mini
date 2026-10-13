@@ -1,0 +1,21 @@
+// array: 全域陣列讀寫 + 函式前向參照
+// 注意：全域需先宣告再使用（單趟編譯），函式可前向呼叫
+array buf[10];
+fn fill(n) {
+  let i = 0;
+  while (i < n) {
+    buf[i] = i * i;
+    i = i + 1;
+  }
+}
+fill(10);
+let j = 0;
+while (j < 10) {
+  print buf[j];
+  j = j + 1;
+}
+// 指標：區域變數視為位址
+fn get(p, k) {
+  return p[k];
+}
+print get(buf, 5);
